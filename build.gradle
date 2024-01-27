@@ -17,9 +17,18 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+//	implementation group:'org.springframework', name:'spring-core', version:'10.0.3.RELEASE'
+//  SHORTCUT
+//  implementaion 'org.springframework:spring-core'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+tasks.register('helloWorld'){
+	doLast {
+		System.out.println("Hello World");
+	}
 }
